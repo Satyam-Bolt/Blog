@@ -18,7 +18,7 @@ function Post() {
     }, [])
 
     const handleDelete = (id) => {
-        axios.delete('http://localhost:3001/deletepost/'+id)
+        axios.delete('https://blog-bay-seven-65.vercel.app/deletepost/'+id)
         .then(result=> {
             navigate('/')
         })
@@ -28,7 +28,7 @@ function Post() {
   return (
     <div className='post_container'>
         <div className='later post_post '>
-            <img src={`http://localhost:3001/Images/${post.file}`} alt="" />
+            <img src={`https://blog-bay-seven-65.vercel.app/Images/${post.file}`} alt="" />
             <h1>{post.title}</h1>
             <p>{post.description}</p>
             
