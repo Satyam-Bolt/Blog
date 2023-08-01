@@ -12,7 +12,7 @@ function EditPost() {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        axios.put('http://localhost:3001/editpost/'+id, {title, description})
+        axios.put('https://blog-bay-seven-65.vercel.app/editpost/'+id, {title, description})
         .then(res => {
             if(res.data === "Success") {
                 navigate('/')
