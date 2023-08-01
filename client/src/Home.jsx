@@ -7,7 +7,7 @@ function Home() {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:3001/getposts')
+    axios.get('https://blog-bay-seven-65.vercel.app/getposts')
     .then(posts => {
       setPosts(posts.data)
     })
@@ -20,7 +20,7 @@ function Home() {
         posts.map(post => (
           <Link to={`/post/${post._id}`} className='post' key={post._id}> 
           
-          <img src={`http://localhost:3001/Images/${post.file}`} alt="" />
+          <img src={`https://blog-bay-seven-65.vercel.app/Images/${post.file}`} alt="" />
           <div className='post_text'>
             <h2>{post.title}</h2>
             <p>{post.description}</p>
