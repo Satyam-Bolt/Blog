@@ -19,7 +19,7 @@ function App() {
 
   axios.defaults.withCredentials = true;
   useEffect(() => {
-    axios.get('https://blog-bay-seven-65.vercel.app/')
+    axios.get('https://blog-bay-seven-65.vercel.app/',{withCredentials:true})
     .then(user => {
       setUser(user.data)
     })
