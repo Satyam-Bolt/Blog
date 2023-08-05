@@ -7,7 +7,7 @@ function Home() {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    axios.get('https://blog-bay-seven-65.vercel.app/getposts')
+    axios.get('https://blog-bay-seven-65.vercel.app/getposts',{withCredentials:true})
     .then(posts => {
       setPosts(posts.data)
     })
