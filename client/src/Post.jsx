@@ -12,7 +12,7 @@ function Post() {
 
 
     useEffect(() => {
-        axios.get('https://blog-bay-seven-65.vercel.app/getpostbyid/'+id)
+        axios.get('https://blog-bay-seven-65.vercel.app/getpostbyid/'+id,{withCredentials:true})
         .then(result=> setPost(result.data))
         .catch(err => console.log(err))
     }, [])
