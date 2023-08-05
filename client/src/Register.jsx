@@ -11,7 +11,7 @@ function Register() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('https://blog-bay-seven-65.vercel.app/register', {username, email, password})
+        axios.post('https://blog-bay-seven-65.vercel.app/register', {username, email, password},{withCredentials:true})
         .then(res => navigate('/login'))
         .catch(err => console.log(err))
     }
