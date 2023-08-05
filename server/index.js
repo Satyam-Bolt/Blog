@@ -17,7 +17,7 @@ app.use("*",cors({
     credentials: true
 }))
 app.use(cookieParser())
-app.use(express.static('public'))
+app.use(express.static())
 // mongoose.connect('mongodb://127.0.0.1:27017/blog');
 const CONN_STR=`mongodb+srv://admin:hwgMrw8rMjXzeCwW@cluster0.cklccnj.mongodb.net/Blog?retryWrites=true&w=majority`
 
