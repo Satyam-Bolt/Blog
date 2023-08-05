@@ -11,7 +11,7 @@ function Login() {
     axios.defaults.withCredentials = true;
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('https://blog-bay-seven-65.vercel.app/login', {email, password})
+        axios.post('https://blog-bay-seven-65.vercel.app/login',{withCredentials:true} ,{email, password})
         .then(res => {
             if(res.data === "Success") {
                 window.location.href = "/"
